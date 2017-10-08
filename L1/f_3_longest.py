@@ -1,5 +1,5 @@
 '''
-ssume s is a string of lower case characters.
+ssume s is a string of lower case iacters.
 
 Write a program that prints the longest substring of s in which the letters occur in alphabetical order.
 For example, if s = 'azcbobobegghakl', then your program should print
@@ -15,12 +15,12 @@ count = 0
 maxcount = 0
 result = 0
 
-for char in range(len(s) - 1):
-    if (s[char] <= s[char + 1]):
+for i in range(len(s) - 1):
+    if (s[i] <= s[i + 1]):
         count += 1
         if count > maxcount:
             maxcount = count
-            result = char + 1 #计算终点 和距离
+            result = i + 1 #计算终点 和距离
     else:
         count = 0
 startposition = result - maxcount # 利用终点 和距离计算起点
